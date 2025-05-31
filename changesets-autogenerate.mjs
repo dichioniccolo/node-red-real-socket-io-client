@@ -43,15 +43,13 @@ if (packageName) {
   description = description?.trim() || "No description provided.";
 
   const changesetContent = `---
-'@mindfiredigital/page-builder-${packageName}': ${changeType}
+'${packageName}': ${changeType}
 ---
 ${description}
 `;
 
   fs.writeFileSync(`.changeset/auto-${Date.now()}.md`, changesetContent);
-  console.log(
-    `✅ Changeset file created for package: page-builder-${packageName}`
-  );
+  console.log(`✅ Changeset file created for package: ${packageName}`);
 } else {
   console.log(
     "⚠️ No valid package scope found in commit message. Valid scopes are: core, react, web-component"
