@@ -13,13 +13,14 @@ RED.nodes.registerType<SocketIoOutEditorNodeProperties>("socket-io-out", {
       value: "",
     },
     eventId: {
+      required: false,
       value: "",
     },
   },
   inputs: 1,
-  icon: "network.png",
+  icon: "send.png",
   paletteLabel: "socket io out",
   label: function () {
-    return this.eventId || this.name || "socket io out";
+    return this.name || this.eventId || "socket io out";
   },
 });
