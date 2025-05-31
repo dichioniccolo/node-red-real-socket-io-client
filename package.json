@@ -14,7 +14,8 @@
     "test:watch": "jest --forceExit --detectOpenHandles --watchAll",
     "dev": "rm -rf dist && pnpm copy && concurrently --kill-others --names 'COPY,EDITOR,RUNTIME,TEST' --prefix '({name})' --prefix-colors 'yellow.bold,cyan.bold,greenBright.bold,magenta.bold' 'onchange -v \"src/**/*.png\" \"src/**/*.svg\" -- pnpm copy' 'pnpm build:editor:watch' 'pnpm build:runtime:watch' 'sleep 10; pnpm test:watch'",
     "lint": "prettier --ignore-path .eslintignore --check '**/*.{js,ts,md}'; eslint --ext .js,.ts .",
-    "lint:fix": "prettier --ignore-path .eslintignore --write '**/*.{js,ts,md}'; eslint --ext .js,.ts . --fix"
+    "lint:fix": "prettier --ignore-path .eslintignore --write '**/*.{js,ts,md}'; eslint --ext .js,.ts . --fix",
+    "ci:publish": "pnpm publish"
   },
   "author": "Niccolo' Di Chio",
   "license": "MIT",
@@ -25,6 +26,7 @@
     }
   },
   "devDependencies": {
+    "@changesets/cli": "^2.29.4",
     "@rollup/plugin-typescript": "^12.1.2",
     "@types/express": "^5.0.2",
     "@types/jest": "^29.5.14",
