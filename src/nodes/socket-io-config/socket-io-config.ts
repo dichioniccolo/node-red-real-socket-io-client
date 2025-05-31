@@ -10,21 +10,23 @@ const nodeInit: NodeInitializer = (RED): void => {
   ): void {
     RED.nodes.createNode(this, config);
 
-    const parsedConfig = mustache.render(JSON.stringify(config), process.env);
+    const uriRaw = config.uri;
+    const pathRaw = config.path || "/socket.io";
 
-    config = JSON.parse(parsedConfig) as SocketIoConfigNodeDef;
-
-    this.uri = config.uri;
-    this.path = config.path || "/socket.io";
+    this.uri = mustache.render(uriRaw, process.env);
+    this.path = mustache.render(pathRaw, process.env);
 
     this.socket = io(this.uri, {
       path: this.path,
       transports: ["websocket"],
+      autoConnect: false,
     });
 
     this.on("close", () => {
       this.socket.disconnect();
     });
+
+    this.socket.connect();
 
     this.context().global.set("socketIoConfigNodeId", this.id);
   }

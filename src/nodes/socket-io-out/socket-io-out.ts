@@ -13,6 +13,10 @@ const nodeInit: NodeInitializer = (RED): void => {
 
     this.config = RED.nodes.getNode(config.config) as SocketIoConfigNode;
 
+    if (!this.config.socket.connected) {
+      this.config.socket.connect();
+    }
+
     this.config.socket.on("connect", () => {
       this.status({ fill: "green", shape: "dot", text: "Connected" });
     });

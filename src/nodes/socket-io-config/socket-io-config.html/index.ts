@@ -16,8 +16,6 @@ RED.nodes.registerType<SocketIoConfigEditorNodeProperties>("socket-io-config", {
       value: "/socket.io/",
     },
   },
-  inputs: 1,
-  outputs: 1,
   icon: "network.png",
   paletteLabel: "socket io config",
   label: function () {
