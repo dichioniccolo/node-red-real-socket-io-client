@@ -1,5 +1,11 @@
 # node-red-contrib-real-socket-io-client
 
+## 1.0.0
+
+### Major Changes
+
+- b9054c4: First working release
+
 ## 0.0.5
 
 ### Patch Changes
