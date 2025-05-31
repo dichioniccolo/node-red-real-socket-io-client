@@ -1,5 +1,11 @@
 # node-red-contrib-real-socket-io-client
 
+## 1.0.1
+
+### Patch Changes
+
+- 38669e8: fix event name with eventId
+
 ## 1.0.0
 
 ### Major Changes
