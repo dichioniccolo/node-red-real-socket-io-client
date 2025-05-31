@@ -26,6 +26,9 @@
       "socket-io-out": "./dist/nodes/socket-io-out/socket-io-out.js"
     }
   },
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.1",
     "@changesets/cli": "^2.29.4",
