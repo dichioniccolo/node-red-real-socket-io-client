@@ -1,5 +1,11 @@
 # node-red-contrib-real-socket-io-client
 
+## 0.0.4
+
+### Patch Changes
+
+- da5c942: fix npm ignore
+
 ## 0.0.3
 
 ### Patch Changes
