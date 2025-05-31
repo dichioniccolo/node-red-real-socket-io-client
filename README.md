@@ -68,4 +68,4 @@ MIT
 
 ## Author
 
-Developed and maintained by \[Your Name or Organization].
+Developed and maintained by Niccolo' Di Chio
