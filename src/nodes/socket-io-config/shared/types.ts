@@ -1,3 +1,4 @@
 export interface SocketIoConfigOptions {
-  // node options
+  uri: string;
+  path: string;
 }

@@ -4,16 +4,23 @@ import { SocketIoConfigEditorNodeProperties } from "./modules/types";
 declare const RED: EditorRED;
 
 RED.nodes.registerType<SocketIoConfigEditorNodeProperties>("socket-io-config", {
-  category: "function",
+  category: "config",
   color: "#a6bbcf",
   defaults: {
-    name: { value: "" },
+    uri: {
+      required: true,
+      value: "ws://localhost:4100",
+    },
+    path: {
+      required: false,
+      value: "/socket.io/",
+    },
   },
   inputs: 1,
   outputs: 1,
-  icon: "file.png",
+  icon: "network.png",
   paletteLabel: "socket io config",
   label: function () {
-    return this.name || "socket io config";
+    return this.name || `${this.uri}${this.path}` || "socket io config";
   },
 });

@@ -1,9 +1,9 @@
 import fs from "fs";
-import glob from "glob";
+import * as glob from "glob";
 import path from "path";
 import typescript from "@rollup/plugin-typescript";
 
-import packageJson from "./package.json";
+import packageJson from "./package.json" with { type: "json" };
 
 const allNodeTypes = Object.keys(packageJson["node-red"].nodes);
 
