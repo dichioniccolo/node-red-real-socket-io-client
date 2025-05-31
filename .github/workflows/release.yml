@@ -50,9 +50,6 @@ jobs:
           git config --local user.email "github-actions@github.com"
           git config --local user.name "GitHub Actions"
 
-      - name: Generate Changeset from commit messages
-        run: pnpm changeset:autogenerate
-
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
