@@ -28,7 +28,7 @@ const nodeInit: NodeInitializer = (RED): void => {
 
     this.socket.connect();
 
-    this.context().global.set("socketIoConfigNodeId", this.id);
+    // this.context().global.set("socketIoConfigNodeId", this.id);
   }
 
   RED.nodes.registerType("socket-io-config", SocketIoConfigNodeConstructor);
