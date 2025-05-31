@@ -1,5 +1,11 @@
 # node-red-contrib-real-socket-io-client
 
+## 1.0.2
+
+### Patch Changes
+
+- e16b816: fix: event id
+
 ## 1.0.1
 
 ### Patch Changes
