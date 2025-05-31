@@ -1,5 +1,11 @@
 # node-red-contrib-real-socket-io-client
 
+## 0.0.5
+
+### Patch Changes
+
+- 9696537: trying to fix files
+
 ## 0.0.4
 
 ### Patch Changes
