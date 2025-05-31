@@ -1,5 +1,11 @@
 # node-red-contrib-real-socket-io-client
 
+## 1.0.3
+
+### Patch Changes
+
+- ed338a3: fix: remove context global set of node id
+
 ## 1.0.2
 
 ### Patch Changes
