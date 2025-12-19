@@ -1,5 +1,11 @@
 # node-red-contrib-real-socket-io-client
 
+## 1.0.4
+
+### Patch Changes
+
+- 5ab5af1: Update packages
+
 ## 1.0.3
 
 ### Patch Changes
